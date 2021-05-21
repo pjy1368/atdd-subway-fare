@@ -28,6 +28,6 @@ spring:
     url: jdbc:mysql://localhost:3306/subway?useSSL=false&serverTimezone=UTC&characterEncoding=UTF-8
     username: root
     password: zeratul1
-    driver-class-name: org.h2.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
     schema: classpath*:schema.sql
     initialization-mode: always
