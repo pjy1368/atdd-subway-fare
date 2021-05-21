@@ -7,6 +7,8 @@ spring:
   h2:
     console:
       enabled: true
+  profiles:
+    active: prod
 handlebars:
   suffix: .html
   enabled: true
@@ -29,5 +31,5 @@ spring:
     username: root
     password: zeratul1
     driver-class-name: com.mysql.cj.jdbc.Driver
-    schema: classpath*:schema.sql
+    schema: classpath*:db/mysql/schema.sql
     initialization-mode: always
