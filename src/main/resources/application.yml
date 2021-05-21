@@ -15,3 +15,19 @@ security:
     token:
       secret-key: my_secret_is_secret
       expire-length: 3600000
+
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+  h2:
+    console:
+      enabled: false
+  datasource:
+    url: jdbc:mysql://localhost:3306/subway?useSSL=false&serverTimezone=UTC&characterEncoding=UTF-8
+    username: root
+    password: zeratul1
+    driver-class-name: org.h2.Driver
+    schema: classpath*:schema.sql
+    initialization-mode: always
