@@ -1,5 +1,6 @@
 package wooteco.subway.common;
 
+import java.util.Arrays;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -58,6 +59,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(Exception.class)
     public ResponseEntity<ErrorResponse> serverExceptionHandler(Exception exception) {
         fileLogger.error(exception.getMessage());
+        fileLogger.error(Arrays.toString(exception.getStackTrace()));
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
             .body(new ErrorResponse("서버에서 에러가 발생했습니다."));
     }
