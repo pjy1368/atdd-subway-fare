@@ -30,9 +30,7 @@ public class AuthenticationPrincipalConfig implements WebMvcConfigurer {
             .addPathPatterns("/**")
             .excludePathPatterns("/members")
             .excludePathPatterns("/members/**")
-            .excludePathPatterns("/login/token")
-            .excludePathPatterns("/swagger-ui.html/**")
-            .excludePathPatterns("/swagger/**");
+            .excludePathPatterns("/login/token");
     }
 
     @Bean
